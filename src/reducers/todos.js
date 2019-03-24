@@ -10,7 +10,7 @@ import{
 
 
 export default function todos(state = [], action) {
-    switch (action.type) {
+    switch(action.type) {
         case ADD_TODO:
             return state.concat([action.todo])
         case REMOVE_TODO:
