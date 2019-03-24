@@ -6,7 +6,7 @@ function receiveData(todos, goals){
     return {
         type: RECEIVE_DATA,
         todos,
-        goals,
+        goals
     }
 }
 

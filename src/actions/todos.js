@@ -14,14 +14,14 @@ function addTodo(todo) {
 function removeTodo(id) {
     return {
         type: REMOVE_TODO,
-        id,
+        id
     }
 }
 
 function toggleTodo(id) {
     return {
         type: TOGGLE_TODO,
-        id,
+        id
     }
 }
 
@@ -50,9 +50,9 @@ export function handleDeleteTodo(todo){
     }  
 }
 
-export function handleToggle(id){
+export function handleToggleTodo(id){
     return(dispatch) => {
-        dispatch(toggleTodoAction(id))
+        dispatch(toggleTodo(id))
         return API.saveTodoToggle(id)
             .catch(() => {
                 dispatch(toggleTodo(id))
